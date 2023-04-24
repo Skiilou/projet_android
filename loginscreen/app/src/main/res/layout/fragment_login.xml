@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentLogin"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/tvWelcomeback"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="50sp"
+        android:text="@string/welcome_back"
+        android:textColor="#B7C4CF"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="15"
+        android:textAllCaps="true"
+
+        />
+
+    <FrameLayout
+        android:id="@+id/flLogin"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="300dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:hint="@string/username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:autofillHints="username"
+                android:inputType="text"
+                android:background="@drawable/test_style"
+                android:gravity="center"
+
+
+                />
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="2dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etUsername"
+                android:autofillHints=""
+                android:background="@drawable/test_style"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/btnValider"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="290dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/valider"
+                android:textSize="10.4sp"
+                tools:ignore="SmallSp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</FrameLayout>
